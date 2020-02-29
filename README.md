@@ -1,2 +1,1 @@
-# udemy-js
-Created to study JS in Udemy
+## Created to study JS in Udemy
