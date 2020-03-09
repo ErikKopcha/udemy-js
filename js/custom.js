@@ -41,17 +41,17 @@ console.log(arr[0]);
 // console.log(typeof(answer));
 
 // Операторы в JS
-let incr = 10,
-    decr = 10;
+// let incr = 10,
+//     decr = 10;
 
-console.log(incr++); // инкремент
-console.log(decr--); // декремент
+// console.log(incr++); // инкремент
+// console.log(decr--); // декремент
 
-console.log(5 % 2); // остаток от деления
+// console.log(5 % 2); // остаток от деления
 
-console.log('2' == 2);
+// console.log('2' == 2);
 
-let isChecked = true,
-    isClose = true;
+// let isChecked = true,
+//     isClose = true;
 
-console.log(isChecked && !isClose);
+// console.log(isChecked && !isClose);
