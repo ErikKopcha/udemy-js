@@ -37,7 +37,21 @@ console.log(arr[0]);
 // console.log(answer);
 
 // есть возможность вписать ответ на вопрос
-// let answer = prompt('Are you here?', 'Yes');
+// let answer = +prompt('Are you here?', 'Yes');
 // console.log(typeof(answer));
 
-// Операторы
+// Операторы в JS
+let incr = 10,
+    decr = 10;
+
+console.log(incr++); // инкремент
+console.log(decr--); // декремент
+
+console.log(5 % 2); // остаток от деления
+
+console.log('2' == 2);
+
+let isChecked = true,
+    isClose = true;
+
+console.log(isChecked && !isClose);
