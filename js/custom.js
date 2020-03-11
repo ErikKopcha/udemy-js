@@ -40,6 +40,9 @@
 // let answer = +prompt('Are you here?', 'Yes');
 // console.log(typeof(answer));
 
+
+
+
 // Операторы в JS
 // let incr = 10,
 //     decr = 10;
@@ -56,36 +59,42 @@
 
 // console.log(isChecked && !isClose);
 
+
+
+
 // Условия 
-let num = 50;
+// let num = 50;
 
-if (num < 49) {
-  console.log('No!');
-} else if (num > 100) {
-  console.log('No!');
-} else {
-  console.log('Yes!');
-}
+// if (num < 49) {
+//   console.log('No!');
+// } else if (num > 100) {
+//   console.log('No!');
+// } else {
+//   console.log('Yes!');
+// }
 
-(num == 50) ? console.log('Yes!') : console.log('No!');
+// (num == 50) ? console.log('Yes!') : console.log('No!');
 
-switch (num) {
-  case num < 49:
-    console.log('No!');
-    break;
-  case num > 100:
-    console.log('No!');
-    break;
-  case num > 80:
-    console.log('No!');
-    break;
-  case 50:
-    console.log('Yes!');
-    break;
-  default:
-    console.log('error');
-    break;
-}
+// switch (num) {
+//   case num < 49:
+//     console.log('No!');
+//     break;
+//   case num > 100:
+//     console.log('No!');
+//     break;
+//   case num > 80:
+//     console.log('No!');
+//     break;
+//   case 50:
+//     console.log('Yes!');
+//     break;
+//   default:
+//     console.log('error');
+//     break;
+// }
+
+
+
 
 // Циклы
 // while (num < 55) {
@@ -99,10 +108,50 @@ switch (num) {
 // }
 // while (num < 55);
 
-for (let i = 1; i < 8; i++) {
-  if (i == 6) {
-    // break;
-    continue;
-  }
-  console.log(i);
-}
+// for (let i = 1; i < 8; i++) {
+//   if (i == 6) {
+//     // break;
+//     continue;
+//   }
+//   console.log(i);
+// }
+
+
+
+
+// Функции
+// let num = 0;
+// function showMessage(text) {
+//   console.log(text);
+//   num++;
+// }
+
+// showMessage('Hello!!!');
+// console.log(num);
+
+// function calc(a, b) {
+//   return (a + b);
+// }
+
+// let calc = (a, b) => a + b;
+
+// console.log(calc(3, 4));
+// console.log(calc(8, 4));
+
+// function retVar() {
+//   let num = 50;
+//   return num;
+// }
+
+// let anotherNum = retVar();
+// console.log(anotherNum);
+
+// let str = 'test';
+// console.log(str.length);
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
+
+// let twelve = '12.2px';
+// // console.log(Math.round(twelve));
+// console.log(parseInt(twelve));
+// console.log(parseFloat(twelve));
