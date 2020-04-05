@@ -1,1 +1,1 @@
-## Created to study JS in Udemy
+## Created to study JavaScript, React + Redux in Udemy

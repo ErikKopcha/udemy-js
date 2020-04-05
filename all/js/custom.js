@@ -1,6 +1,7 @@
 'use strict';
 
-////////////////////// Типы данных
+////////////////////////////// Типы данных
+
 // let number = 5;
 // let string = 'hello!';
 // let sym = Symbol();
@@ -40,7 +41,7 @@
 // let answer = +prompt('Are you here?', 'Yes');
 // console.log(typeof(answer));
 
-////////////////////// Операторы в JS
+////////////////////////////// Операторы в JS
 
 // let incr = 10,
 //     decr = 10;
@@ -57,7 +58,7 @@
 
 // console.log(isChecked && !isClose);
 
-////////////////////// Условия 
+////////////////////////////// Условия 
 
 // let num = 50;
 
@@ -89,7 +90,7 @@
 //     break;
 // }
 
-////////////////////// Циклы
+////////////////////////////// Циклы
 
 // while (num < 55) {
 //   console.log(num);
@@ -110,7 +111,7 @@
 //   console.log(i);
 // }
 
-////////////////////// Функции
+////////////////////////////// Функции
 
 // let num = 0;
 // function showMessage(text) {
@@ -148,7 +149,7 @@
 // console.log(parseInt(twelve));
 // console.log(parseFloat(twelve));
 
-////////////////////// callback
+////////////////////////////// callback
 
 // function first() {
 //   setTimeout( function() {
@@ -177,7 +178,7 @@
 // }
 // learnJS('JavaScript', done);
 
-//////////////////////object
+////////////////////////////// object
 
 // let options = {
 //   width: 1024,
@@ -203,7 +204,7 @@
 
 // console.log(Object.keys(options).length);
 
-////////////////////// massive
+////////////////////////////// massive
 
 // let arr = ['first', 2, 3, 'four', 5];
 
@@ -274,7 +275,7 @@
 // console.log(john);
 // console.log(john.armor);
 
-/////////////////////// динамическая типизация
+////////////////////////////// динамическая типизация
 
 // - to string
 // 1
@@ -309,7 +310,7 @@
 // // 3
 // console.log(typeof(!!'5'));
 
-////////////////////// динамическая типизация ДЗ
+////////////////////////////// динамическая типизация ДЗ
 
 // let x = 5;
 // console.log(x++); // 5
@@ -321,3 +322,46 @@
 // console.log(+"Infinity"); // Infinity
 // console.log("Ёжик" > "яблоко"); // false
 // console.log(0 || "" || 2 || undefined || true || falsе); // 2
+
+////////////////////////////// получение элементов со страницы
+
+// let box = document.getElementById('box'),
+//     btn = document.getElementsByTagName('button'),
+//     circle = document.getElementsByClassName('circle'),
+//     heart = document.querySelectorAll('.heart'),
+//     oneHeart = document.querySelector('.heart'),
+//     wrapper = document.querySelector('.wrapper');
+    
+// box.style.backgroundColor = 'blue';
+// btn[1].style.borderRadius = '100%';
+
+// circle[0].style.backgroundColor = 'red';
+// circle[1].style.backgroundColor = 'yellow';
+// circle[2].style.backgroundColor = 'green';
+
+// for (let i = 0; i < heart.length; i++) {
+//   heart[i].style.backgroundColor = 'black';
+// }
+
+// // item - каждый элемент
+// // i - номер конфеты
+// // hearts - весь массив
+// heart.forEach(function (item, i, hearts) {
+//   item.style.backgroundColor = 'blue';
+// });
+
+// let div = document.createElement('div'),
+//     text = document.createTextNode('YEEEEAAAAAP!!!!!');
+
+// div.classList.add('black');
+
+// // div.innerHTML = '<h1>Hello!!!</h1>';
+// div.textContent = 'Hello !!!'; // безопасный прием текста от пользователя 
+
+// // document.body.appendChild(div);
+// document.body.insertBefore(div, circle[0]); // что вставляем и перед чем
+// document.body.removeChild(circle[1]);
+// wrapper.removeChild(heart[1]);
+// // wrapper.appendChild(div);
+
+// document.body.replaceChild(btn[1], circle[1]); // что вставляем и вместо чего вставляем
