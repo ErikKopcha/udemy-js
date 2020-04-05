@@ -1,6 +1,10 @@
 'use strict';
 
+
+
 ////////////////////////////// Типы данных
+
+
 
 // let number = 5;
 // let string = 'hello!';
@@ -41,7 +45,11 @@
 // let answer = +prompt('Are you here?', 'Yes');
 // console.log(typeof(answer));
 
+
+
 ////////////////////////////// Операторы в JS
+
+
 
 // let incr = 10,
 //     decr = 10;
@@ -58,7 +66,11 @@
 
 // console.log(isChecked && !isClose);
 
+
+
 ////////////////////////////// Условия 
+
+
 
 // let num = 50;
 
@@ -90,7 +102,11 @@
 //     break;
 // }
 
+
+
 ////////////////////////////// Циклы
+
+
 
 // while (num < 55) {
 //   console.log(num);
@@ -111,7 +127,11 @@
 //   console.log(i);
 // }
 
+
+
 ////////////////////////////// Функции
+
+
 
 // let num = 0;
 // function showMessage(text) {
@@ -149,7 +169,11 @@
 // console.log(parseInt(twelve));
 // console.log(parseFloat(twelve));
 
+
+
 ////////////////////////////// callback
+
+
 
 // function first() {
 //   setTimeout( function() {
@@ -178,7 +202,11 @@
 // }
 // learnJS('JavaScript', done);
 
+
+
 ////////////////////////////// object
+
+
 
 // let options = {
 //   width: 1024,
@@ -204,7 +232,11 @@
 
 // console.log(Object.keys(options).length);
 
+
+
 ////////////////////////////// massive
+
+
 
 // let arr = ['first', 2, 3, 'four', 5];
 
@@ -275,7 +307,11 @@
 // console.log(john);
 // console.log(john.armor);
 
+
+
 ////////////////////////////// динамическая типизация
+
+
 
 // - to string
 // 1
@@ -310,7 +346,11 @@
 // // 3
 // console.log(typeof(!!'5'));
 
+
+
 ////////////////////////////// динамическая типизация ДЗ
+
+
 
 // let x = 5;
 // console.log(x++); // 5
@@ -323,7 +363,11 @@
 // console.log("Ёжик" > "яблоко"); // false
 // console.log(0 || "" || 2 || undefined || true || falsе); // 2
 
+
+
 ////////////////////////////// получение элементов со страницы
+
+
 
 // let box = document.getElementById('box'),
 //     btn = document.getElementsByTagName('button'),
