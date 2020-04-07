@@ -215,7 +215,7 @@
 // };
 
 // console.log(options.name);
- 
+
 // options.bool = false;
 // options.colors = {
 //   border: 'black',
@@ -375,7 +375,7 @@
 //     heart = document.querySelectorAll('.heart'),
 //     oneHeart = document.querySelector('.heart'),
 //     wrapper = document.querySelector('.wrapper');
-    
+
 // box.style.backgroundColor = 'blue';
 // btn[1].style.borderRadius = '100%';
 
@@ -409,3 +409,36 @@
 // // wrapper.appendChild(div);
 
 // document.body.replaceChild(btn[1], circle[1]); // что вставляем и вместо чего вставляем
+
+
+
+////////////////////////////// События и их обработчики
+
+
+
+// let btn = document.querySelectorAll('button'),
+//     wrapper = document.querySelector('.wrapper-btn'),
+//     link = document.querySelector('a');
+
+// btn[0].addEventListener('click', function (event) {
+//   console.log('Произошло событие: ' + event.type + ' на элементе ' + event.target);
+// });
+
+// wrapper.addEventListener('click', function (event) {
+//   console.log('Произошло событие: ' + event.type + ' на элементе ' + event.target);
+// });
+
+// link.addEventListener('click', function (event) {
+//   event.preventDefault();
+//   console.log('Произошло событие: ' + event.type + ' на элементе ' + event.target);
+// });
+
+// btn.forEach(function (item) {
+//   item.addEventListener('mouseleave', function () {
+//     console.log('EXIT');
+//   });
+// });
+
+// btn[0].addEventListener('mouseenter', function () {
+//   alert('First button!!! MOVE');
+// });
