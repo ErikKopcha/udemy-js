@@ -337,6 +337,11 @@ header ul li:before {
   margin-top: 4px;
 }
 
+.seconds {
+  display: inline-block;
+  min-width: 105px;
+}
+
 .content .slider {
   margin-top: 150px;
   position: relative;
