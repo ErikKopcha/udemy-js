@@ -41,8 +41,8 @@
    });
 
    // timer 
-
-   let deadline = '2029.05.20';
+   
+   let deadline = '2025.10.10';
 
    // узнаем промежуток времени между временем в данный момент и дедлайном
    function getTimeRemaining(endtime) {
