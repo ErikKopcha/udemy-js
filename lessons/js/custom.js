@@ -449,36 +449,113 @@
 
 
 
-class User {
+// class User {
 
-  // это базовые настройки класса
-  // конструкторы нужны для создания новых однотипных обьектов
-  // товары в магазинах, пользователи на сайте и тд
-  constructor(name, id) {
-    this.name = name;
-    this.id = id;
-    this.human = true;
-  }
+//   // это базовые настройки класса
+//   // конструкторы нужны для создания новых однотипных обьектов
+//   // товары в магазинах, пользователи на сайте и тд
+//   constructor(name, id) {
+//     this.name = name;
+//     this.id = id;
+//     this.human = true;
+//   }
 
-  // прописываем метод класса, и то, что он умеет делать
-  hello() {
-    console.log('Hello! ' + this.name);
-  }
+//   // прописываем метод класса, и то, что он умеет делать
+//   hello() {
+//     console.log('Hello! ' + this.name);
+//   }
 
-  exit() {
-    console.log('Пользователь ' + this.name + ' ушел');
-  }
-}
+//   exit() {
+//     console.log('Пользователь ' + this.name + ' ушел');
+//   }
+// }
 
-// создаем переменные и помещаем туда наших пользователей, 
-// в этих переменных лежат обьекты, а не ф-ции
-// когда мы вызываем класс User и передаем ему аргументи(имя и айди)
-// то она стала ф-цией конструктором, конструирует новых пользователей
-let ivan = new User('Ivan', 25),
-    alex = new User('Alex', 26);
+// // создаем переменные и помещаем туда наших пользователей, 
+// // в этих переменных лежат обьекты, а не ф-ции
+// // когда мы вызываем класс User и передаем ему аргументи(имя и айди)
+// // то она стала ф-цией конструктором, конструирует новых пользователей
+// let ivan = new User('Ivan', 25),
+//     alex = new User('Alex', 26);
 
-console.log(ivan);
-console.log(alex);
+// console.log(ivan);
+// console.log(alex);
 
-ivan.hello();
-alex.exit();
+// ivan.hello();
+// alex.exit();
+
+// function Clock({ template }) {
+  
+//   let timer;
+
+//   function render() {
+//     let date = new Date();
+
+//     let hours = date.getHours();
+//     if (hours < 10) hours = '0' + hours;
+
+//     let mins = date.getMinutes();
+//     if (mins < 10) mins = '0' + mins;
+
+//     let secs = date.getSeconds();
+//     if (secs < 10) secs = '0' + secs;
+
+//     let output = template
+//       .replace('h', hours)
+//       .replace('m', mins)
+//       .replace('s', secs);
+
+//     console.log(output);
+//   }
+
+//   this.stop = function() {
+//     clearInterval(timer);
+//   };
+
+//   this.start = function() {
+//     render();
+//     timer = setInterval(render, 1000);
+//   };
+
+// }
+
+// let clock = new Clock({template: 'h:m:s'});
+// clock.start();
+
+// class Clock {
+//   constructor({ template }) {
+//     this.template = template;
+//   }
+
+//   render() {
+//     let date = new Date();
+
+//     let hours = date.getHours();
+//     if (hours < 10) hours = '0' + hours;
+
+//     let mins = date.getMinutes();
+//     if (mins < 10) mins = '0' + mins;
+
+//     let secs = date.getSeconds();
+//     if (secs < 10) secs = '0' + secs;
+
+//     let output = this.template
+//       .replace('h', hours)
+//       .replace('m', mins)
+//       .replace('s', secs);
+
+//     console.log(output);
+//   }
+
+//   stop() {
+//     clearInterval(this.timer);
+//   }
+
+//   start() {
+//     this.render();
+//     this.timer = setInterval(() => this.render(), 1000);
+//   }
+// }
+
+
+// let clock = new Clock({template: 'h:m:s'});
+// clock.start();
