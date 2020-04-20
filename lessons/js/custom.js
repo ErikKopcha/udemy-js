@@ -4,8 +4,6 @@
 
 ////////////////////////////// Типы данных
 
-
-
 // let number = 5;
 // let string = 'hello!';
 // let sym = Symbol();
@@ -49,8 +47,6 @@
 
 ////////////////////////////// Операторы в JS
 
-
-
 // let incr = 10,
 //     decr = 10;
 
@@ -69,8 +65,6 @@
 
 
 ////////////////////////////// Условия 
-
-
 
 // let num = 50;
 
@@ -106,8 +100,6 @@
 
 ////////////////////////////// Циклы
 
-
-
 // while (num < 55) {
 //   console.log(num);
 //   num++;
@@ -130,8 +122,6 @@
 
 
 ////////////////////////////// Функции
-
-
 
 // let num = 0;
 // function showMessage(text) {
@@ -173,8 +163,6 @@
 
 ////////////////////////////// callback
 
-
-
 // function first() {
 //   setTimeout( function() {
 //     console.log(1);
@@ -206,8 +194,6 @@
 
 ////////////////////////////// object
 
-
-
 // let options = {
 //   width: 1024,
 //   height: 1024,
@@ -235,8 +221,6 @@
 
 
 ////////////////////////////// massive
-
-
 
 // let arr = ['first', 2, 3, 'four', 5];
 
@@ -311,8 +295,6 @@
 
 ////////////////////////////// динамическая типизация
 
-
-
 // - to string
 // 1
 // console.log(typeof(String(null)));
@@ -350,8 +332,6 @@
 
 ////////////////////////////// динамическая типизация ДЗ
 
-
-
 // let x = 5;
 // console.log(x++); // 5
 // console.log([] + false - null + true); // NaN
@@ -366,8 +346,6 @@
 
 
 ////////////////////////////// получение элементов со страницы
-
-
 
 // let box = document.getElementById('box'),
 //     btn = document.getElementsByTagName('button'),
@@ -414,8 +392,6 @@
 
 ////////////////////////////// События и их обработчики
 
-
-
 // let btn = document.querySelectorAll('button'),
 //     wrapper = document.querySelector('.wrapper-btn'),
 //     link = document.querySelector('a');
@@ -446,8 +422,6 @@
 
 
 ////////////////////////////// Конструкторы и классы
-
-
 
 // class User {
 
@@ -583,8 +557,6 @@
 
 ////////////////////////////// Контекст вызова this
 
-
-
 // function showThis (a, b) {
 //   console.log(this);
 
@@ -651,3 +623,130 @@
 // console.log(double(10)); // 20
 
 // Указание конкретного контекста - call, apply, bind
+
+
+
+////////////////////////////// ES6. Интреполяция
+
+// let user = {
+//   name: 'Ivan',
+//   age: 30,
+//   email: 'ex@gmail.com'
+// };
+
+// document.write(`Пользователю + ${user.name} + ${user.age} + лет. Его почтовый адрес: ${user.email}`);
+
+// при использовании let / const в цикле для каждой итерации исп своя переменная 
+
+// ф-ция создания массивов
+// function makeArr() {
+//   var items = [];
+//   for (var i = 0; i < 10; i++) {
+//     var item = function () {
+//       console.log(i);
+//     };
+//     items.push(item);
+//   }
+
+//   return items;
+// }
+
+// var arr = makeArr();
+
+// arr[1]();
+// arr[3]();
+// arr[7]();
+// // 10, мы получили один результат, var = один на весь цикл
+// // но, если изменить var на let:
+
+// function makeArr() {
+//   let items = [];
+//   for (let i = 0; i < 10; i++) {
+//     let item = function () {
+//       console.log(i);
+//     };
+//     items.push(item);
+//   }
+
+//   return items;
+// }
+
+// let arr = makeArr();
+
+// arr[1]();
+// arr[3]();
+// arr[7]();
+
+
+
+////////////////////////////// стрелочные ф-ции
+
+// let fun = () => {
+//   console.log(this);
+// };
+
+// fun();
+
+// let obj = {
+//   num: 5,
+//   sayNumber: function () {
+//     let say = () => {
+//       console.log(this);
+//     };
+//     say();
+//   }
+// };
+
+// obj.sayNumber();
+
+
+
+////////////////////////////// параметры по умолчанию
+
+// function calcOrDouble(number, basis = 2) {
+//   // basis = basis || 2; // ES 5
+//   console.log(number * basis);
+// }
+
+// calcOrDouble(3, 5);
+// calcOrDouble(6);
+
+
+
+////////////////////////////// классы
+
+// class Rectangle {
+//   constructor(height, width = 10) {
+//     this.height = height;
+//     this.width = width;
+//   }
+
+//   calcArea() {
+//     return this.height * this.width;
+//   }
+// }
+
+// const square = new Rectangle(10);
+
+// console.log(square.calcArea());
+
+
+
+////////////////////////////// Spread операторы
+
+// let video = ['youtube', 'instagram', 'vimeo'],
+//   blogs = ['wordpress', 'livejournal', 'blogger'],
+//   internet = [...video, ...blogs, 'facebook', 'vkontakte'];
+
+// console.log(internet);
+
+// function log(a, b, c) {
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+//   console.log(a + b + c);
+// }
+
+// let numbers = [2, 5, 7];
+
+// log(...numbers);
