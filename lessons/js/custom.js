@@ -484,7 +484,7 @@
 // alex.exit();
 
 // function Clock({ template }) {
-  
+
 //   let timer;
 
 //   function render() {
@@ -559,3 +559,95 @@
 
 // let clock = new Clock({template: 'h:m:s'});
 // clock.start();
+
+// Наследование классов через extends
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// class Rabbit extends Animal {
+//   constructor(name) {
+//     super(name);
+//     this.created = Date.now();
+//   }
+// }
+// // Error: this is not defined Ошибка возникает потому, 
+// // что конструктор дочернего класса должен вызывать super().
+// let rabbit = new Rabbit("Белый кролик"); 
+
+// console.log(rabbit.name);
+
+
+
+////////////////////////////// Контекст вызова this
+
+
+
+// function showThis (a, b) {
+//   console.log(this);
+
+//   function sum () {
+//     console.log(this);
+
+//     return this.a + this.b;
+//   }
+//   console.log(sum());
+// }
+
+// showThis(4, 5);
+// showThis(5, 5);
+// window - window - NaN
+
+// function showThis (a, b) {
+//   console.log(this);
+
+//   function sum () {
+//     console.log(this);
+
+//     return a + b;
+//   }
+//   console.log(sum());
+// }
+
+// showThis(4, 5);
+// showThis(5, 5);
+
+// window 9 - window 10
+
+// let obj = {
+//   a: 20,
+//   b: 15,
+//   sum: function () {
+//     console.log(this);
+//   }
+// };
+
+// obj.sum();
+
+// this === obj
+
+// let user = { 
+//   name: 'John'
+// };
+
+// function sayName(surname) {
+//   console.log(this);
+//   console.log(this.name + surname);
+// }
+
+// // вручную привязываем данный user в функцию
+// console.log(sayName.call(user, ' Smith'));
+// console.log(sayName.apply(user, [' Snow']));
+
+// function count(number) {
+//   return this * number;
+// }
+// // создаем переменную и записываем в нее ф-цию(то, что она умеет делать)
+// // то, что мы передаем в bind, всегда заменяет (this!)
+// let double = count.bind(2);
+// console.log(double(3)); // 6
+// console.log(double(10)); // 20
+
+// Указание конкретного контекста - call, apply, bind

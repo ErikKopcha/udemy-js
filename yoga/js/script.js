@@ -41,7 +41,7 @@
    });
 
    // timer 
-   
+
    let deadline = '2025.10.10';
 
    // узнаем промежуток времени между временем в данный момент и дедлайном
@@ -115,4 +115,47 @@
 
    // вызываем ф-цию с id и временем остановки таймера
    setClock('timer', deadline);
+
+   // вызов модального окна
+
+   function showModal() {
+     let more = document.querySelector('.more'),
+       overlay = document.querySelector('.overlay'),
+       close = document.querySelector('.popup-close'),
+       descriptionBtn = document.querySelectorAll('.description-btn');
+
+     more.addEventListener('click', function () {
+       overlay.style.display = 'block';
+       // this - наша кнопка, на которую нажимаем
+       this.classList.add('more-splash');
+       // запрет на прокрутку страницы при открытым модальным окном
+       document.body.style.overflow = 'hidden';
+     });
+
+     // вызов модалки на табах
+     descriptionBtn.forEach((el) => {
+      el.addEventListener('click', function() {
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+      });
+     });
+
+     close.addEventListener('click', function () {
+       overlay.style.display = "none";
+       more.classList.remove('more-splash');
+       document.body.style.overflow = '';
+     });
+
+     window.addEventListener('keydown', function (evt) {
+       if (evt.keyCode === 27) {
+         evt.preventDefault();
+         overlay.style.display = "none";
+         more.classList.remove('more-splash');
+         document.body.style.overflow = '';
+       }
+     });
+   }
+   
+  showModal();
  });
