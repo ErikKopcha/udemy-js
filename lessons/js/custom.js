@@ -1,7 +1,4 @@
 'use strict';
-
-
-
 ////////////////////////////// Типы данных
 
 // let number = 5;
@@ -750,3 +747,48 @@
 // let numbers = [2, 5, 7];
 
 // log(...numbers);
+
+
+
+////////////////////////////// JSON формат передачи данных
+// let options = {
+//   width: 1366,
+//   height: 768,
+//   background: 'red',
+//   font: {
+//     size: '16px',
+//     color: '#fff'
+//   }
+// };
+
+// console.log(JSON.parse(JSON.stringify(options)));
+
+// let inputUsd = document.getElementById('usd'),
+//   inputUah = document.getElementById('uah');
+
+// inputUah.addEventListener('input', () => {
+//   let request = new XMLHttpRequest();
+
+//   // request.open(method, url, async, login, pass);
+//   request.open('GET', 'js/current.json');
+//   request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+//   request.send();
+
+//   // status - код ответа сервера, в каком состоянии сервер
+//   // statusText - тесттовый ответ
+//   // response - то, что бекенд разр посылает нам
+//   // readyState - текущее состояние сервера 0-4
+
+//   // событие на наш запрос
+//   // отслеживаем запрос сервера
+//   // response - ответ от нашего сервера 
+//   request.addEventListener('readystatechange', function () {
+//     if(request.readyState === 4 && request.status == 200) {
+//       let data = JSON.parse(request.response);
+      
+//       inputUsd.value = inputUah.value / data.usd;
+//     } else {
+//       inputUsd.value = 'Something went wrong!';
+//     }
+//   });
+// });
