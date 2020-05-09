@@ -134,11 +134,11 @@
 
      // вызов модалки на табах
      descriptionBtn.forEach((el) => {
-      el.addEventListener('click', function() {
-        overlay.style.display = 'block';
-        this.classList.add('more-splash');
-        document.body.style.overflow = 'hidden';
-      });
+       el.addEventListener('click', function () {
+         overlay.style.display = 'block';
+         this.classList.add('more-splash');
+         document.body.style.overflow = 'hidden';
+       });
      });
 
      close.addEventListener('click', function () {
@@ -156,6 +156,118 @@
        }
      });
    }
-   
-  showModal();
+
+   showModal();
+
+   // popup form
+   let message = {
+     loading: 'Загрузка',
+     success: 'Спасибо! Скоро мы с Вами свяжемся!',
+     failure: 'Что-то пошло не так...'
+   };
+
+   let form = document.querySelector('.main-form'),
+     input = form.getElementsByTagName('input'),
+     statusMessage = document.createElement('div');
+
+   statusMessage.classList.add('status');
+
+   form.addEventListener('submit', function (event) {
+     event.preventDefault();
+     form.appendChild(statusMessage);
+
+     let request = new XMLHttpRequest();
+     // настройка запроса
+     request.open('POST', 'server.php');
+
+     // заголовки HTTP запроса
+     request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+
+     // помещаем все то, что заполнил наш пользователь
+     let formData = new FormData(form);
+
+     // помещаем все данные в объект
+     let obj = {};
+     formData.forEach((value, key) => {
+       obj[key] = value;
+     });
+
+     // преобразовываем данные в json формат
+     let json = JSON.stringify(obj);
+
+     // используем метод отправки запроса на сервер
+     request.send(json);
+
+     // наблюдаем за изменениеми запроса и выводим ответ в зависимости от статуса
+     request.addEventListener('readystatechange', function () {
+       if (request.readyState < 4) {
+         statusMessage.innerHTML = message.loading;
+       } else if (request.readyState === 4 && request.status == 200) {
+         statusMessage.innerHTML = message.success;
+       } else {
+         statusMessage.innerHTML = message.failure;
+       }
+     });
+
+     // очистка инпутов после отправки запроса
+     input.forEach((el) => {
+       el.value = '';
+     });
+   });
+
+   // form
+   let messages = {
+     loading: 'Загрузка',
+     success: 'Спасибо! Скоро мы с Вами свяжемся!',
+     failure: 'Что-то пошло не так...'
+   };
+
+   let contactForm = document.querySelector('#form'),
+     contactInput = form.querySelectorAll('input'),
+     contactStatusMessage = document.createElement('div');
+
+   contactStatusMessage.classList.add('status');
+
+   contactForm.addEventListener('submit', function (event) {
+     event.preventDefault();
+     contactForm.appendChild(contactStatusMessage);
+
+     let contactRequest = new XMLHttpRequest();
+     // настройка запроса
+     contactRequest.open('POST', 'server.php');
+
+     // заголовки HTTP запроса
+     contactRequest.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+
+     // помещаем все то, что заполнил наш пользователь
+     let contactFormData = new FormData(contactForm);
+
+     // помещаем все данные в объект
+     let obj = {};
+     contactFormData.forEach((value, key) => {
+       obj[key] = value;
+     });
+
+     // преобразовываем данные в json формат
+     let json = JSON.stringify(obj);
+
+     // используем метод отправки запроса на сервер
+     contactRequest.send(json);
+
+     // наблюдаем за изменениеми запроса и выводим ответ в зависимости от статуса
+     contactRequest.addEventListener('readystatechange', function () {
+       if (contactRequest.readyState < 4) {
+         contactStatusMessage.innerHTML = messages.loading;
+       } else if (contactRequest.readyState === 4 && contactRequest.status == 200) {
+         contactStatusMessage.innerHTML = messages.success;
+       } else {
+         contactStatusMessage.innerHTML = messages.failure;
+       }
+     });
+
+     // очистка инпутов после отправки запроса
+     contactInput.forEach((el) => {
+       el.value = '';
+     });
+   });
  });
