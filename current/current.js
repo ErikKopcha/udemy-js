@@ -1,7 +1,7 @@
 let inputUah = document.getElementById('uah'),
   inputUsd = document.getElementById('usd');
 
-  inputUah.addEventListener('input', () => {
+inputUah.addEventListener('input', () => {
   return new Promise(function (resolve, reject) {
     let request = new XMLHttpRequest();
 
