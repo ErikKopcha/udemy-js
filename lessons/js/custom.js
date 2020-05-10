@@ -796,6 +796,7 @@
 
 
 ////////////////////////////// Promise
+
 // let func1 = function (param, func2) {
 //   func2 (function(param, func3) {
 //     func3(function(param, func4) {
@@ -880,3 +881,31 @@
 //          .then(mark => console.log('Вы попали в цель!'))
 //          .then(win)
 //          .catch(loose)
+
+
+
+////////////////////////////// try / catch
+
+let json = '{"id": 2}';
+
+// служит для перехвата ошибок
+try {
+  let user = JSON.parse(json);
+  console.log(user);
+
+  // создаем свою ошибку
+  if (!user.name) {
+    throw new Error('В этих данных нет имени');
+  }
+} catch(error) {
+  console.log(error);
+  // console.log(error.name);
+  // console.log(error.message);
+  // console.log(error.stack);
+
+  console.log(`Мы получили ошибку: ${error.name}`);
+} finally {
+  console.log('Я выполнюсь всегда');
+}
+
+console.log('А я буду работать дальше');
