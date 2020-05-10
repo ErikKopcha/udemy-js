@@ -886,26 +886,26 @@
 
 ////////////////////////////// try / catch
 
-let json = '{"id": 2}';
+// let json = '{"id": 2}';
 
-// служит для перехвата ошибок
-try {
-  let user = JSON.parse(json);
-  console.log(user);
+// // служит для перехвата ошибок
+// try {
+//   let user = JSON.parse(json);
+//   console.log(user);
 
-  // создаем свою ошибку
-  if (!user.name) {
-    throw new Error('В этих данных нет имени');
-  }
-} catch(error) {
-  console.log(error);
-  // console.log(error.name);
-  // console.log(error.message);
-  // console.log(error.stack);
+//   // создаем свою ошибку
+//   if (!user.name) {
+//     throw new Error('В этих данных нет имени');
+//   }
+// } catch(error) {
+//   console.log(error);
+//   // console.log(error.name);
+//   // console.log(error.message);
+//   // console.log(error.stack);
 
-  console.log(`Мы получили ошибку: ${error.name}`);
-} finally {
-  console.log('Я выполнюсь всегда');
-}
+//   console.log(`Мы получили ошибку: ${error.name}`);
+// } finally {
+//   console.log('Я выполнюсь всегда');
+// }
 
-console.log('А я буду работать дальше');
+// console.log('А я буду работать дальше'); 
