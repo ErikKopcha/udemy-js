@@ -150,7 +150,7 @@
      });
 
      overlaySuccessClose.addEventListener('click', function () {
-       overlaySuccess.style.display = 'none !important';
+       overlaySuccess.style.display = 'none';
        more.classList.remove('more-splash');
        document.body.style.overflow = '';
      });
@@ -175,7 +175,7 @@
    };
 
    let form = document.querySelector('.main-form'),
-     input = document.getElementsByTagName('input'),
+     input = document.querySelectorAll('input'),
      statusMessage = document.createElement('div'),
      overlaySuccess = document.querySelector('.overlay__success'),
      contactForm = document.querySelector('#form');
