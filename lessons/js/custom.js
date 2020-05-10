@@ -785,10 +785,98 @@
 //   request.addEventListener('readystatechange', function () {
 //     if(request.readyState === 4 && request.status == 200) {
 //       let data = JSON.parse(request.response);
-      
+
 //       inputUsd.value = inputUah.value / data.usd;
 //     } else {
 //       inputUsd.value = 'Something went wrong!';
 //     }
 //   });
 // });
+
+
+
+////////////////////////////// Promise
+// let func1 = function (param, func2) {
+//   func2 (function(param, func3) {
+//     func3(function(param, func4) {
+//       func4();
+//     })
+//   })
+// };
+
+// //  not good
+// // let drink = 0;
+
+// function shoot (arrow, headshoot, fail) {
+//   console.log('Вы сделали выстрел...');
+
+//   setTimeout(() => {
+//     Math.random() > 0.5 ? headshoot({}) : fail('Вы промахнулись');
+//   }, 3000);
+// }
+
+// function win() {
+//   console.log('Вы победили!');
+//   (drink == 1) ? buyBeer() : giveMoeny();
+// }
+
+// function buyBeer() {
+//   console.log('Вам купили пиво!');
+// }
+
+// function giveMoeny() {
+//   console.log('Вам заплатили!');
+// }
+
+// function loose() {
+//   console.log('Вы проиграли');
+// }
+
+// shoot({},
+//   function(mark) {
+//     console.log('Вы попали в цель!');
+//     win(mark, buyBeer, giveMoeny);
+//   },
+//   function(miss) {
+//     console.error(miss);
+//     loose();
+//   }
+// );
+
+// good
+// let drink = 0;
+
+// function shoot(arrow) {
+//   console.log('Вы сделали выстрел...');
+//  // как создать промис
+//   let promise = new Promise(function(resolve, reject) {
+//     setTimeout(() => {
+//       Math.random() > 0.5 ? resolve({}) : reject('Вы промахнулись');
+//     }, 3000);
+//   });
+
+//   return promise;
+// }
+
+// // как использовать промис
+// function win() {
+//   console.log('Вы победили!');
+//   (drink == 1) ? buyBeer() : giveMoeny();
+// }
+
+// function buyBeer() {
+//   console.log('Вам купили пиво!');
+// }
+
+// function giveMoeny() {
+//   console.log('Вам заплатили!');
+// }
+
+// function loose() {
+//   console.log('Вы проиграли');
+// }
+
+// shoot({})
+//          .then(mark => console.log('Вы попали в цель!'))
+//          .then(win)
+//          .catch(loose)

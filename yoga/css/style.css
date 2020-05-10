@@ -702,7 +702,8 @@ header ul li:before {
   margin-top: 17px;
 }
 
-.overlay {
+.overlay,
+.overlay__success {
   position: fixed;
   display: none;
   top: 0;
@@ -712,7 +713,8 @@ header ul li:before {
   z-index: 3;
 }
 
-.overlay .popup {
+.overlay .popup, 
+.overlay__success .popup {
   position: fixed;
   z-index: 4;
   left: 50%;
@@ -723,7 +725,8 @@ header ul li:before {
   transform: translateX(-50%);
 }
 
-.overlay .popup-close {
+.overlay .popup-close,
+.overlay__success .popup-close {
   position: absolute;
   right: -20px;
   top: -35px;
@@ -733,7 +736,8 @@ header ul li:before {
   font-weight: 300;
 }
 
-.overlay .popup-title {
+.overlay .popup-title,
+.overlay__success .popup-title {
   display: block;
   width: 100%;
   height: 71px;
@@ -747,14 +751,16 @@ header ul li:before {
   text-align: center;
 }
 
-.overlay .popup-form {
+.overlay .popup-form,
+.overlay__success .popup-form {
   background: url(../img/modal.jpg) center no-repeat;
   background-size: cover;
   padding: 35px 88px 50px 88px;
   color: #fff;
 }
 
-.overlay .popup-form-header {
+.overlay .popup-form-header,
+.overlay__success .popup-form-header {
   padding: 0;
   font-weight: 400;
   line-height: 27px;
@@ -762,7 +768,8 @@ header ul li:before {
   text-align: center;
 }
 
-.overlay .popup-form__label {
+.overlay .popup-form__label,
+.overlay__success .popup-form__label {
   display: block;
   margin-top: 23px;
   font-size: 20px;
@@ -770,7 +777,8 @@ header ul li:before {
   text-align: center;
 }
 
-.overlay .popup-form__input {
+.overlay .popup-form__input,
+.overlay__success .popup-form__input {
   width: 365px;
   height: 56px;
   margin-top: 17px;
@@ -781,39 +789,48 @@ header ul li:before {
   text-align: center;
 }
 
-.overlay .popup-form__input::-webkit-input-placeholder {
+.overlay .popup-form__input::-webkit-input-placeholder,
+.overlay__success .popup-form__input::-webkit-input-placeholder {
   color: #fff;
 }
 
-.overlay .popup-form__input::-moz-placeholder {
+.overlay .popup-form__input::-moz-placeholder,
+.overlay__success .popup-form__input::-moz-placeholder {
   color: #fff;
 }
 
-.overlay .popup-form__input:-moz-placeholder {
+.overlay .popup-form__input:-moz-placeholder,
+.overlay__success .popup-form__input:-moz-placeholder {
   color: #fff;
 }
 
-.overlay .popup-form__input:-ms-input-placeholder {
+.overlay .popup-form__input:-ms-input-placeholder,
+.overlay__success .popup-form__input:-ms-input-placeholder {
   color: #fff;
 }
 
-.overlay .popup-form__input:focus::-webkit-input-placeholder {
+.overlay .popup-form__input:focus::-webkit-input-placeholder,
+.overlay__success .popup-form__input:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.overlay .popup-form__input:focus::-moz-placeholder {
+.overlay .popup-form__input:focus::-moz-placeholder,
+.overlay__success .popup-form__input:focus::-moz-placeholder {
   color: transparent;
 }
 
-.overlay .popup-form__input:focus:-moz-placeholder {
+.overlay .popup-form__input:focus:-moz-placeholder,
+.overlay__success .popup-form__input:focus:-moz-placeholder {
   color: transparent;
 }
 
-.overlay .popup-form__input:focus:-ms-input-placeholder {
+.overlay .popup-form__input:focus:-ms-input-placeholder,
+.overlay__success .popup-form__input:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.overlay .popup-form__btn {
+.overlay .popup-form__btn,
+.overlay__success .popup-form__btn {
   width: 180px;
   height: 56px;
   font-size: 15px;
@@ -825,6 +842,7 @@ header ul li:before {
   cursor: pointer;
 }
 
-.overlay .popup-form__btn:hover {
+.overlay .popup-form__btn:hover,
+.overlay__success .popup-form__btn:hover {
   box-shadow: 0 0 10px #c78030;
 }
