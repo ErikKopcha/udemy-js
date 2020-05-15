@@ -340,8 +340,36 @@ window.addEventListener('DOMContentLoaded', function () {
       }
     }
   }
-  // ф-ция для обновления часов каждую секунду
 
+  // ф-ция для обновления часов каждую секунду
   // вызываем ф-цию с id и временем остановки таймера
   setClock('timer', deadline);
+
+  // гамбургер меню
+  let menuBtn = document.getElementById('nav-icon2'),
+    menuLinks = document.querySelectorAll('.nav__item'),
+    header = document.querySelector('header');
+
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('open');
+    header.classList.toggle('hidden');
+    document.body.classList.toggle('overflow');
+  });
+
+  menuLinks.forEach((el) => {
+    el.addEventListener('click', () => {
+      menuBtn.classList.toggle('open');
+      header.classList.toggle('hidden');
+      document.body.classList.toggle('overflow');
+    });
+  });
+
+  window.addEventListener('keydown', function (evt) {
+    evt.preventDefault();
+    if (evt.keyCode === 27) {
+      menuBtn.classList.remove('open');
+      header.classList.add('hidden');
+      document.body.classList.remove('overflow');
+    }
+  });
 });
