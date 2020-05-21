@@ -12,7 +12,7 @@
 //
 // call('JS', callB);
 
-// object
+// object 
 //  let options = {
 //    name: 'test',
 //    width: 1024,
