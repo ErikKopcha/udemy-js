@@ -1,4 +1,31 @@
-'use strict';
+// class CalcArea {
+//   constructor(width, height) {
+//     this.width = width;
+//     this.height = height;
+//   }
+
+//   calcArea() {
+//     return this.width * this.height;
+//   }
+// }
+
+// class ColorArea extends CalcArea {
+//   constructor(width, height, text, bgColor) {
+//     super(width, height);
+
+//     this.text = text;
+//     this.bgColor = bgColor;
+//   }
+// }
+
+// const div = new ColorArea(10, 20, 'Heeey', 'red');
+// console.log('div: ', div.calcArea());
+
+// let area = new CalcArea(10, 20);
+// let square = new CalcArea(20, 2);
+
+// console.log('area: ', area.calcArea());
+
 
 // callback
 // function call(lang, callbacks) {
