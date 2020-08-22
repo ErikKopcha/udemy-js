@@ -84,3 +84,10 @@
 //    }
 //  }
 //  console.log(counter)
+
+
+function c(number, basis = 2) {
+  console.log(number * basis);
+}
+
+c(3);
