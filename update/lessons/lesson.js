@@ -86,8 +86,49 @@
 //  console.log(counter)
 
 
-function c(number, basis = 2) {
-  console.log(number * basis);
-}
+// function c(number, basis = 2) {
+//   console.log(number * basis);
+// }
 
-c(3);
+// c(3);
+
+// AJAX запросы
+// const inputRub = document.createElement('input'),
+//       inputUsd = document.createElement('input');
+  
+// inputRub.addEventListener('input', () => {
+//   const request = new XMLHttpRequest();
+
+//   // собирает настройки для запроса
+//   // request.open(method, url, async, login, pass);
+//   request.open('GET', 'current.json');
+
+//   // что именно мы отправляем, HTTP заголовки
+//   request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+//   // отправка запроса
+//   // request.send(body); if method post
+//   request.send();
+
+//   // свойства объекта
+//   // status - статус от запроса 100..200..300..400..500
+//   // statusText - текстовое описание от сервера
+//   // response - ответ от сервера
+//   // readyState - текущее состояние запроса
+
+//   // отследование запроса в текущий момент
+//   request.addEventListener('load', () => {
+//     if (request.status === 200) {
+//       console.log(request.response);
+
+//       const data = JSON.parse(request.response);
+//       inputUsd.value = (+inputRub.value / data.current.usd).toFixed(2);
+//     } else {
+//       console.error('Error!');
+//       inputUsd.value = 'Что-то пошло не так.';
+//     }
+//   });
+// });
+
+// document.body.appendChild(inputRub);
+// document.body.appendChild(inputUsd);
