@@ -132,3 +132,26 @@
 
 // document.body.appendChild(inputRub);
 // document.body.appendChild(inputUsd);
+
+// Промиы
+// console.log('');
+//
+// const req = new Promise(function (resolve, reject){
+//   console.log();
+//  
+//   const product = {
+//     name: 'TV',
+//     price: 2000
+//   };
+//  
+//   resolve(product);
+// });
+//
+// req.then((product) => {
+//   console.log(productz);
+// });
+//
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(json => console.log(json));
