@@ -138,20 +138,69 @@
 //
 // const req = new Promise(function (resolve, reject){
 //   console.log();
-//  
+//
 //   const product = {
 //     name: 'TV',
 //     price: 2000
 //   };
-//  
+//
 //   resolve(product);
 // });
 //
 // req.then((product) => {
 //   console.log(productz);
 // });
-//
 
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => response.json())
-  .then(json => console.log(json));
+// fetch
+// fetch('https://jsonplaceholder.typicode.com/posts', {
+//   method: "POST",
+//   body: JSON.stringify({name: 'Alex'}),
+//   headers: {
+//     'Content-type': 'application-json'
+//   }
+// })
+//   .then(response => response.json())
+//   .then(json => console.log(json));
+
+// методи перебору масивів
+
+// filter
+// const names = ['Ivan', 'Ann', 'Alex', 'Voldemart'];
+// const shortNames = names.filter((name) => {
+//   return name.length < 5;
+// }); // < 5
+
+// map
+// const answers = ['IvAn', 'AnnA', 'Hello'];
+// const result = answers.map((item) => {
+//   return item.toLowerCase();
+// }); // lovercase
+
+// every/some
+// const some = ['4', 'asd', 'A'];
+// some.some(item => {
+//   return typeof(item) === 'number';
+// }); // true (якщо хоч один number)
+//
+// some.every(item => {
+//   return typeof(item) === 'number';
+// }); // false (якщо всі number)
+
+//reduce
+// const arr = [4, 5, 6, 1, 2];
+// const res = arr.reduce((sum, current) => {
+//   return sum + current;
+// }); // сума всіх чисел
+
+// const obj = {
+//   ivan: 'persone',
+//   ann: 'persone',
+//   dog: 'animal'
+// };
+//
+// const newArr = Object.entries(obj)
+// .filter(item => item[1] === 'persone')
+// .map(item => item[0]);
+//
+// console.log(newArr); // ['ivan', 'ann']
+
