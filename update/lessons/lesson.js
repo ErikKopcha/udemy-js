@@ -204,3 +204,59 @@
 //
 // console.log(newArr); // ['ivan', 'ann']
 
+
+// localStorage
+
+// const checkbox = document.getElementById('check');
+
+// if (JSON.parse(localStorage.getItem('isChecked')) == true) {
+//   checkbox.checked = true;
+// } else {
+//   checkbox.checked = false;
+// }
+
+// checkbox.addEventListener('change', () => {
+//   if (checkbox.checked == true) {
+//     localStorage.setItem('isChecked', true);
+//   } else {
+//     localStorage.setItem('isChecked', false);
+//   }
+// });
+
+
+//////////////////////////////////////////////////////////////// RegExp
+
+// const ans = 'AnnsnN';
+
+// // i - шукаємо без регістру
+// // g - декілька співпадінь
+// // m - багатостроковий режим
+// const reg = /n/ig;
+
+// console.log(ans.search(reg));
+// console.log(ans.match(reg));
+
+// password
+// const pass = prompt(`password`);
+
+// console.log(pass.replace('/./g, "*"'));
+
+// console.log('12-23-42'.replace(/-/g, ':'));
+
+// test 
+// const reg = /n/ig;
+// const ans = '123wq';
+
+// console.log(reg.test(ans)); // false
+
+// \d - шукаємо цифри
+// \w - всі букви
+// \s - всі пробіли
+
+// const str = 'My name is R2D2';
+
+// console.log(str.match(/\w\d\w\d/i)); // цифра буква цифра буква
+
+// \D - не числа
+// \W - не букви
+// \S - не пробіли
