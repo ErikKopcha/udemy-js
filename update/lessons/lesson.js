@@ -55,7 +55,7 @@
 //
 //  options.makeTest();
  
- // деструктуризация
+ ///////////////////////////////////////////////////////////////////// деструктуризация
  // вытаскиваем ключи в отдельную переменную
  // const {border, background} = options.colors;
  // console.log(border);
@@ -92,7 +92,7 @@
 
 // c(3);
 
-// AJAX запросы
+///////////////////////////////////////////////////////////////////// AJAX запросы
 // const inputRub = document.createElement('input'),
 //       inputUsd = document.createElement('input');
   
@@ -133,7 +133,7 @@
 // document.body.appendChild(inputRub);
 // document.body.appendChild(inputUsd);
 
-// Промиы
+///////////////////////////////////////////////////////////////////// Промиы
 // console.log('');
 //
 // const req = new Promise(function (resolve, reject){
@@ -151,7 +151,7 @@
 //   console.log(productz);
 // });
 
-// fetch
+///////////////////////////////////////////////////////////////////// fetch
 // fetch('https://jsonplaceholder.typicode.com/posts', {
 //   method: "POST",
 //   body: JSON.stringify({name: 'Alex'}),
@@ -162,7 +162,7 @@
 //   .then(response => response.json())
 //   .then(json => console.log(json));
 
-// методи перебору масивів
+///////////////////////////////////////////////////////////////////// методи перебору масивів
 
 // filter
 // const names = ['Ivan', 'Ann', 'Alex', 'Voldemart'];
@@ -205,7 +205,7 @@
 // console.log(newArr); // ['ivan', 'ann']
 
 
-// localStorage
+/////////////////////////////////////////////////////////////////// localStorage
 
 // const checkbox = document.getElementById('check');
 
